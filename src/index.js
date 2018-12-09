@@ -7,10 +7,22 @@ import { Provider } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 
-const feedbackList = (state = [], action) => {
+const feedbackList = (state = {
+    pageUno: 0,
+    pageDos: 0,
+    pageTres: 0,
+    pageQuatro: ''
+}, action) => {
     switch (action.type ) {
-        case "GET_FEEDBACK":
-            return action.payload;
+        case "FEEDBACK_UNO":
+            return {...state, pageUno: action.payload};
+            case "FEEDBACK_DOS":
+            return {...state, pageDos: action.payload};
+            case "FEEDBACK_TRES":
+            return {...state, pageTres: action.payload};
+            case "FEEDBACK_QUATRO":
+            return {...state, pageQuatro: action.payload};
+
         default:
             return state;
     }
