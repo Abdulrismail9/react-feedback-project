@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import axios from 'axios';
 import './App.css';
 import { connect } from 'react-redux';
 import PageOne from '../PageOne/PageOne.jsx';
@@ -7,41 +6,14 @@ import PageTwo from '../PageTwo/PageTwo.jsx';
 import PageThree from '../PageThree/PageThree.jsx';
 import PageFour from '../PageFour/PageFour.jsx';
 import { HashRouter as Router, Route } from "react-router-dom";
+import PageFive from '../PageFive/PageFive';
 
 class App extends Component {
-
-  // getFeedback = () => {
-  //   console.log('in getFeedback');
-  //   axios.get('/api/feedback').then( response => {
-  //     console.log('checking', response);
-  //       this.props.dispatch({type: 'GET_FEEDBACK', payload: response.data})
-   
-  //     });
-  // }
-  // componentDidMount () {
-  //   this.getFeedback();
-  // }
-
-  // addFeedback = () => {
-  //   console.log('in add feedback');
-  //   axios.post('/api/feedback', )
-  // }
 
 
 
   render() {
-    // let feedbackItems;
-    //   feedbackItems = this.props.reduxStore.feedbackList.map((items, i) => {
-    //     return ( <div key={items.id}>
-    //     <div>your feedback</div>
-    //       <p></p>
-    //     <div>Feelings: {items.feeling}</div>
-    //     <div>Understanding: {items.understanding}</div>
-    //     <div>Support: {items.support}</div>
-    //     <div>Comments: {items.comments}</div>
-    // </div>
-    //   )})
-    //   console.log(this.props.reduxStore.feedbackList);
+
 
     return (
       <Router>
@@ -53,9 +25,10 @@ class App extends Component {
         <Route path="/pageTwo" exact component={PageTwo} />
         <Route path="/pageThree" exact component={PageThree} />
         <Route path="/pageFour" exact component={PageFour} />
-        
-          {/* {feedbackItems} */}
+        <Route path="/pageFive" exact component={PageFive} />
+
         </div>
+      
       </Router>
     );
   }

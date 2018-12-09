@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Review from '../Review/Review.jsx';
 
 
 class PageThree extends Component {
 
     handleChangeFor = (event) => {
         this.setState({
-          pageTres: event.target.value
+            pageTres: event.target.value
         })
-      }
+    }
 
+// function to dispatch response to redux state
+// also function to switch to next page
     clickHandler = () => {
         this.props.dispatch(
-            {type:'FEEDBACK_TRES', payload: this.state.pageTres} );
+            { type: 'FEEDBACK_TRES', payload: this.state.pageTres });
         this.props.history.push('/pageFour');
     }
 
@@ -20,10 +23,11 @@ class PageThree extends Component {
     render() {
         return (
             <div>
+                <p>3 of 4 pages</p>
                 <p>How well are you being supported?</p>
                 <input onChange={this.handleChangeFor}></input>
-                <button onClick={this.clickHandler}>Next</button>
-
+                <button onClick={this.clickHandler}>Enter</button>
+                <Review />
             </div>
         );
     }
