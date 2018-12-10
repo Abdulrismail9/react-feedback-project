@@ -8,8 +8,7 @@ import Button from '@material-ui/core/Button';
 
 class PageFive extends Component {
 
-
-
+// this function will take us to a different page when the button is clicked
     clickHandler = () => {
         this.props.history.push('/');
     }

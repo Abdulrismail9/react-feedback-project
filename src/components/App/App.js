@@ -8,8 +8,10 @@ import PageFour from '../PageFour/PageFour.jsx';
 import { HashRouter as Router, Route } from "react-router-dom";
 import PageFive from '../PageFive/PageFive';
 
-class App extends Component {
 
+class App extends Component {
+// this will render information on each component called 
+//also show each component depending on the route 
   render() {
 
     return (

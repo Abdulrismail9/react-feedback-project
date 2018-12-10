@@ -7,6 +7,7 @@ import { Provider } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 
+// reducer to hold data for each response 
 const feedbackList = (state = {
     pageUno: 0,
     pageDos: 0,

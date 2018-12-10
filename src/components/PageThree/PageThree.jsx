@@ -22,7 +22,6 @@ class PageThree extends Component {
         this.props.history.push('/pageFour');
     }
 
-
     render() {
         return (
             <div>

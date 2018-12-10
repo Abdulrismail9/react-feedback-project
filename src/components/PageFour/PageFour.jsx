@@ -21,7 +21,7 @@ class PageTwo extends Component {
         this.props.dispatch(
             { type: 'FEEDBACK_QUATRO', payload: this.state.pageQuatro });
     }
-
+// this function makes the axios call to the server to push the responses to the DB
     addResponsesToDb = () => {
         console.log('in addResponsesToDb')
         let body = this.props.reduxStore.feedbackList;
@@ -37,7 +37,6 @@ class PageTwo extends Component {
         this.addResponsesToDb();
         this.props.history.push('/pageFive');
     }
-
 
     render() {
         return (

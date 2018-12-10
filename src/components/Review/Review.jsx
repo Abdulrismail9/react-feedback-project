@@ -3,11 +3,8 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import './Review.css';
 
-
-
+// this component will update the results for each response 
 class Review extends Component {
-
-
 
     render() {
         return (
