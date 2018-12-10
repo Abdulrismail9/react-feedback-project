@@ -18,12 +18,13 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Feedback!</h1>
         </header>
+        <div className="Routes">
         <Route path="/" exact component={PageOne} />
         <Route path="/pageTwo" exact component={PageTwo} />
         <Route path="/pageThree" exact component={PageThree} />
         <Route path="/pageFour" exact component={PageFour} />
         <Route path="/pageFive" exact component={PageFive} />
-
+        </div>
         </div>
       
       </Router>
