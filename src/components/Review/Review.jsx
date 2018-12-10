@@ -8,12 +8,6 @@ class Review extends Component {
 
 
 
-
-    // clickHandlerDos = () => {
-        
-            
-    // }
-
     render() {
         return (
             <div>
@@ -21,9 +15,7 @@ class Review extends Component {
                 <p>Understanding: {this.props.reduxStore.feedbackList.pageDos}</p>
                 <p>Support: {this.props.reduxStore.feedbackList.pageTres}</p>
                 <p>Comments: {this.props.reduxStore.feedbackList.pageQuatro}</p>
-                
-                
-
+ 
             </div>
         );
     }

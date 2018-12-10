@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Review from '../Review/Review.jsx';
 import axios from 'axios';
+import { withRouter } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
+
 
 
 class PageTwo extends Component {
@@ -42,8 +45,8 @@ class PageTwo extends Component {
                 <p>4 of 4 pages</p>
                 <p>Any comments?</p>
                 <input onChange={this.handleChangeFor}></input>
-                <button onClick={this.clickHandler}>Enter</button>
-                <button onClick={this.clickHandlerDos}>Submit</button>
+                <Button variant="contained" color="primary" onClick={this.clickHandler}>Enter</Button>
+                <Button variant="contained" onClick={this.clickHandlerDos}>Submit</Button>
                 <Review />
             </div>
         );
@@ -54,4 +57,4 @@ const mapReduxStateToProps = (reduxStore) => ({
     reduxStore
 })
 
-export default connect(mapReduxStateToProps)(PageTwo);
+export default withRouter(connect(mapReduxStateToProps)(PageTwo));

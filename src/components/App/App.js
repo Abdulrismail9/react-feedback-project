@@ -10,10 +10,7 @@ import PageFive from '../PageFive/PageFive';
 
 class App extends Component {
 
-
-
   render() {
-
 
     return (
       <Router>
