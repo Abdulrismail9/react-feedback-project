@@ -32,7 +32,7 @@ class PageTwo extends Component {
             console.log('error',error);
         })
     }
-
+// function to switch to next page
     clickHandlerDos = () => {
         this.addResponsesToDb();
         this.props.history.push('/pageFive');
